@@ -9,7 +9,8 @@ public class SyoujoController : MonoBehaviour
     float m_moveSpeed = 3f;
     int m_aFeelingOfBelieve = 3;
     bool m_followMode;
-    public ShinigamiController shinigami;
+    [SerializeField]
+    ShinigamiController shinigami;
 
 
     // Use this for initialization
