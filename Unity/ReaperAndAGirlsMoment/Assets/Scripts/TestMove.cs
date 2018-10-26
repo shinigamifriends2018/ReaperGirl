@@ -20,13 +20,11 @@ public class TestMove : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.D))
         {
-            scale.x = -1f;
             transform.Translate(new Vector2(m_walk * Time.deltaTime, 0f));
 
         }
         if (Input.GetKey(KeyCode.A))
         {
-            scale.x = 1f;
             transform.Translate(new Vector2(-m_walk * Time.deltaTime, 0f));
 
         }
