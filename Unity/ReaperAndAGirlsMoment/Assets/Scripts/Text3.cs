@@ -24,15 +24,13 @@ public class Text3 : Text1 {
                     {
                         m_check = true;
                         m_text[0].SetActive(m_check);
-                        m_text[1].SetActive(m_check);
 
                         if (Input.GetKeyDown(KeyCode.Return))
                         {
                             m_check = false;
                             m_text[0].SetActive(m_check);
-                            m_text[1].SetActive(m_check);
                             m_check = true;
-                            m_text[2].SetActive(m_check);
+                            m_text[1].SetActive(m_check);
                             m_checker = 1;
                         }
                     }
@@ -41,10 +39,12 @@ public class Text3 : Text1 {
                         if (Input.GetKeyDown(KeyCode.Return))
                         {
                             m_check = false;
+                            m_text[1].SetActive(m_check);
+                            m_check = true;
                             m_text[2].SetActive(m_check);
                             m_check = true;
-                            m_text[3].SetActive(m_check);
                             m_checker = 2;
+
                         }
                     }
                     else if (m_checker == 2)
@@ -52,10 +52,11 @@ public class Text3 : Text1 {
                         if (Input.GetKeyDown(KeyCode.Return))
                         {
                             m_check = false;
-                            m_text[3].SetActive(m_check);
+                            m_text[2].SetActive(m_check);
                             m_checker = 3;
                             Time.timeScale = 1;
                             m_enemyDesCheck = false;
+
                         }
                     }
                 }

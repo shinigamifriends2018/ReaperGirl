@@ -21,7 +21,6 @@ public class Text2 : Text1 {
                 m_text[1].SetActive(m_check);
                 m_check = true;
                 m_text[2].SetActive(m_check);
-                m_text[3].SetActive(m_check);
                 m_checker = 2;
             }
         }
@@ -30,7 +29,7 @@ public class Text2 : Text1 {
             {
                 m_check = false;
                 m_text[2].SetActive(m_check);
-                m_text[3].SetActive(m_check);
+
                 m_checker = 3;
                 Time.timeScale = 1;
             }
@@ -48,9 +47,9 @@ public class Text2 : Text1 {
                 m_text3.m_enemyCheck = true;
                 m_check = true;
                 m_text[1].SetActive(m_check);
+                m_text[3].SetActive(m_check);
                 m_text[4].SetActive(m_check);
                 m_text[5].SetActive(m_check);
-                m_text[6].SetActive(m_check);
                 m_checker = 1;
                 Time.timeScale = 0;
             }
