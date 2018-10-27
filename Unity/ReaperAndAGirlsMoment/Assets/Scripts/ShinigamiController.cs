@@ -2,25 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShinigamiController : MonoBehaviour {
+public class ShinigamiController : CharacterBase {
 
-    [SerializeField]
-    float m_moveSpeed = 4f;
-    [SerializeField]
-    float m_jumpPower = 5f;
     Vector2 scale;
     Rigidbody2D rb;
     bool m_toConnectHands;
 
-    //  [SerializeField]
-    //   Transform m_syoujo;
     Vector2 m_shinigamisPos;
 
     // Use this for initialization
     void Start () {
+        m_simpleAnimation = GetComponent<SimpleAnimation>();
         scale = transform.localScale;
         rb = GetComponent<Rigidbody2D>();
-	}
+        m_moveSpeed = 4f;
+        m_jumpPower = 7.5f;
+}
+
+    void Attack()
+    {
+       // m_simpleAnimation.Play("Attack");
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -43,9 +45,12 @@ public class ShinigamiController : MonoBehaviour {
             
         if (Input.GetButtonDown("Jump"))
         {
-            rb.AddForce(Vector2.up * m_jumpPower, ForceMode2D.Impulse);
+            base.Jump(rb);
         }
-
+        if (Input.GetButtonDown("Attack"))
+        {
+            Attack();
+        }
  /*       if (Input.GetButtonDown("ConnectHands"))
         {
             if(m_toConnectHands == true)
@@ -56,7 +61,7 @@ public class ShinigamiController : MonoBehaviour {
 */
         transform.localScale = scale;
 	}
-  /*  private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "syoujo")
         {
@@ -70,7 +75,7 @@ public class ShinigamiController : MonoBehaviour {
             m_toConnectHands = false;
         }
     }
-    */
+    
     public Vector2 Posinvestigate
     {
         get

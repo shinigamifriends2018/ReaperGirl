@@ -328,6 +328,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+<<<<<<< HEAD
+=======
+--- !u!114 &596318538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 596318537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c53a5c24c0b548347a5f126fdfaa54c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> 映人＿作業用
 --- !u!61 &596318539
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -956,6 +970,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+=======
+--- !u!114 &1169483677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1169483672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c53a5c24c0b548347a5f126fdfaa54c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1169483678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1169483672}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91aef339c0b64224fbca9365bcbb99a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> 映人＿作業用
 --- !u!1 &1205285564
 GameObject:
   m_ObjectHideFlags: 0
@@ -1078,6 +1117,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+=======
+--- !u!114 &1205285570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1205285564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91aef339c0b64224fbca9365bcbb99a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> 映人＿作業用
 --- !u!1 &1351791725
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,6 +1236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d649827821fedca478a751bdb2eff9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   m_check: 1
   m_enemyCheck: 0
   m_text:
@@ -1194,6 +1248,8 @@ MonoBehaviour:
   - {fileID: 1627553706}
   m_checker: 0
   m_text3: {fileID: 1945873436}
+=======
+>>>>>>> 映人＿作業用
 --- !u!61 &1371703315
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1307,6 +1363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee66e5a9000845740800eda447d50c7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   m_check: 1
   m_enemyCheck: 0
   m_text:
@@ -1315,6 +1372,8 @@ MonoBehaviour:
   - {fileID: 1169483672}
   - {fileID: 1810118382}
   m_checker: 0
+=======
+>>>>>>> 映人＿作業用
 --- !u!61 &1560334185
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1721,13 +1780,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fa513527fca6c24c8e3ad914fa4795a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_check: 1
-  m_enemyCheck: 0
-  m_text:
-  - {fileID: 1677183037}
-  - {fileID: 1789181194}
-  - {fileID: 311543844}
-  m_checker: 0
 --- !u!212 &1743039751
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2154,6 +2206,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+=======
+--- !u!114 &1810118387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1810118382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c53a5c24c0b548347a5f126fdfaa54c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1810118388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1810118382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91aef339c0b64224fbca9365bcbb99a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> 映人＿作業用
 --- !u!1 &1833175244
 GameObject:
   m_ObjectHideFlags: 0
@@ -2288,6 +2365,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+=======
+--- !u!114 &1833175250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1833175244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91aef339c0b64224fbca9365bcbb99a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> 映人＿作業用
 --- !u!1 &1851301835
 GameObject:
   m_ObjectHideFlags: 0
@@ -2465,6 +2556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92adbbb6475bf1144bd851158ee41ba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   m_check: 1
   m_enemyCheck: 0
   m_text:
@@ -2472,6 +2564,8 @@ MonoBehaviour:
   - {fileID: 1801788116}
   - {fileID: 1970798757}
   m_checker: 0
+=======
+>>>>>>> 映人＿作業用
 --- !u!4 &1945873437
 Transform:
   m_ObjectHideFlags: 0
@@ -2768,7 +2862,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ad4822ff893fd1438be3a1a7369603e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   m_walk: 2
+=======
+>>>>>>> 映人＿作業用
 --- !u!61 &2066720701
 BoxCollider2D:
   m_ObjectHideFlags: 0

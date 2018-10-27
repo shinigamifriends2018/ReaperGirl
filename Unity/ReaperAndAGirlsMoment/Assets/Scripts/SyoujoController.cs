@@ -3,21 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class SyoujoController : MonoBehaviour
+public class SyoujoController : CharacterBase
 {
-    [SerializeField]
-    float m_moveSpeed = 3f;
     int m_aFeelingOfBelieve = 3;
     bool m_followMode;
     [SerializeField]
     ShinigamiController shinigami;
 
-
     // Use this for initialization
 
     void Start()
     {
-        
+        base.m_moveSpeed = 3f;
     }
 
     // Update is called once per frame
@@ -31,12 +28,11 @@ public class SyoujoController : MonoBehaviour
         {
             m_followMode = false;
         }
-
         if (m_followMode == true)
         {
             if (shinigami.Posinvestigate.x > transform.position.x)
             {
-                transform.Translate(new Vector2(m_moveSpeed * Time.deltaTime, 0f));
+                Move();
             }
             else if (shinigami.Posinvestigate.x < transform.position.x)
             {
@@ -44,11 +40,12 @@ public class SyoujoController : MonoBehaviour
             }
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+   /* private void OnTriggerEnter2D(Collider2D collision)
     {
         if(m_followMode == true)
         {
 
         }
     }
+    */
 }

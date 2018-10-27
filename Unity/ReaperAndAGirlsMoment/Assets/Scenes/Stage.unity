@@ -1716,7 +1716,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &644389898
 Transform:
   m_ObjectHideFlags: 0
@@ -2436,6 +2436,8 @@ GameObject:
   - component: {fileID: 879722898}
   - component: {fileID: 879722896}
   - component: {fileID: 879722897}
+  - component: {fileID: 879722900}
+  - component: {fileID: 879722901}
   m_Layer: 0
   m_Name: shinigami
   m_TagString: shinigami
@@ -2490,7 +2492,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveSpeed: 4
-  m_jumpPower: 7.5
 --- !u!4 &879722899
 Transform:
   m_ObjectHideFlags: 0
@@ -2498,14 +2499,51 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 879722895}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.4, y: 0.7749916, z: 0}
+  m_LocalPosition: {x: -7.86, y: 0.7549998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1405653988}
-  - {fileID: 1498058729}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &879722900
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 879722895}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c85a88e0adf6eb74a9e3ade97d53e411, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &879722901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 879722895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3759e2aae0f7b9a47bb98fc64bf3c543, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingMode: 1
+  m_WrapMode: 0
+  m_Clip: {fileID: 7400000, guid: cb9173b712eff2b448fec430a90df9d0, type: 2}
+  m_States:
+  - clip: {fileID: 7400000, guid: cb9173b712eff2b448fec430a90df9d0, type: 2}
+    name: Default
+    defaultState: 1
 --- !u!1 &886500356
 GameObject:
   m_ObjectHideFlags: 0
@@ -3486,7 +3524,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.6999999, y: 0.7, z: 0}
-  m_Children: []
+  m_Children:
+  - {fileID: 1498058729}
   m_Father: {fileID: 879722899}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3724,12 +3763,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1498058727}
-  m_LocalRotation: {x: -0, y: -0, z: -0.58614534, w: 0.810206}
-  m_LocalPosition: {x: 0.38, y: 0.17, z: 0}
-  m_LocalScale: {x: 0.40132, y: 0.40132, z: 0.40132}
+  m_LocalRotation: {x: -0, y: -0, z: -0.58614624, w: 0.81020534}
+  m_LocalPosition: {x: 0.54285735, y: 0.24285716, z: 0}
+  m_LocalScale: {x: 0.5733145, y: 0.57331455, z: 0}
   m_Children: []
-  m_Father: {fileID: 879722899}
-  m_RootOrder: 1
+  m_Father: {fileID: 1405653988}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -71.768005}
 --- !u!1 &1510206726
 GameObject:
