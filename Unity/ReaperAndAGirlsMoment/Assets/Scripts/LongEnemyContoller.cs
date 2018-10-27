@@ -21,7 +21,7 @@ public class LongEnemyContoller : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == ("Sickle"))
+        if (collision.gameObject.tag == ("sinigami"))
         {
             --m_enemyHP;
             if (m_enemyHP == 0)

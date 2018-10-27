@@ -20,6 +20,7 @@ public class EnemyController : MonoBehaviour {
         Vector2 syoujoPos  = m_syoujo.transform.position; 
         Vector2 akuryouPos = m_akuryou.transform.position;
         float moveDis = m_enemyMove * Time.deltaTime;
+
         if (akuryouPos.x > syoujoPos.x)
         {
             if (akuryouPos.x - syoujoPos.x > moveDis)
@@ -28,7 +29,7 @@ public class EnemyController : MonoBehaviour {
             }
         }
         else
-        {
+        {   
             if (syoujoPos.x - akuryouPos.x > moveDis)
             {
                 transform.Translate(new Vector2(moveDis, 0f));
