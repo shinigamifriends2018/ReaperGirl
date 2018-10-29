@@ -8,6 +8,7 @@ public class CharacterBase : MonoBehaviour {
     protected float m_jumpPower;
     protected int m_hitPoint;
     protected SimpleAnimation m_simpleAnimation;
+    protected bool m_jump = true;
 
     // Use this for initialization
     void Start () {
@@ -25,7 +26,11 @@ public class CharacterBase : MonoBehaviour {
     }
     protected void Jump(Rigidbody2D rb)
     {
-        rb.AddForce(Vector2.up * m_jumpPower, ForceMode2D.Impulse);
+        if (m_jump == true)
+        {
+            rb.AddForce(Vector2.up * m_jumpPower, ForceMode2D.Impulse);
+            m_jump = false;
+        }
     }
     protected void Damage()
     {

@@ -7,6 +7,11 @@ public class ShinigamiController : CharacterBase {
     Vector2 scale;
     Rigidbody2D rb;
     bool m_toConnectHands;
+    bool m_onAttack = false;
+    [SerializeField]
+    GameObject m_sickle;
+    [SerializeField]
+    SyoujoController syoujo;
 
     Vector2 m_shinigamisPos;
 
@@ -15,17 +20,24 @@ public class ShinigamiController : CharacterBase {
         m_simpleAnimation = GetComponent<SimpleAnimation>();
         scale = transform.localScale;
         rb = GetComponent<Rigidbody2D>();
-        m_moveSpeed = 4f;
-        m_jumpPower = 7.5f;
-}
-
-    void Attack()
-    {
-       // m_simpleAnimation.Play("Attack");
+        m_jumpPower = 10.5f;
     }
-	
+
 	// Update is called once per frame
 	void Update () {
+        if(syoujo.ConnectHandsTF == false)
+        {
+            m_moveSpeed = 4.0f;
+        }
+        else
+        {
+            m_moveSpeed = 4.5f;
+        }
+        Debug.Log("main" + m_onAttack);
+        if (m_onAttack == false)
+        {
+            m_simpleAnimation.CrossFade("Idle", 0.2f);
+        }
         m_shinigamisPos = gameObject.transform.position;
         float h = Input.GetAxisRaw("Horizontal");
         transform.Translate(new Vector2(m_moveSpeed * h * Time.deltaTime, 0f));
@@ -45,27 +57,62 @@ public class ShinigamiController : CharacterBase {
             
         if (Input.GetButtonDown("Jump"))
         {
-            base.Jump(rb);
+            Jump(rb);
         }
         if (Input.GetButtonDown("Attack"))
         {
-            Attack();
+            Attack();  
         }
- /*       if (Input.GetButtonDown("ConnectHands"))
+        if (Input.GetButtonDown("ConnectHands"))
         {
-            if(m_toConnectHands == true)
+            if (syoujo.ConnectHandsTF == false)
             {
-                gameObject.transform.parent = m_syoujo;
+                if (m_toConnectHands == true)
+                {
+                    syoujo.OnConnectHands = true;
+                }
+            }
+            else
+            {
+                syoujo.OnConnectHands = false;
             }
         }       
-*/
+
         transform.localScale = scale;
 	}
+
+    void Attack()
+    {
+        if (m_onAttack == false)
+        {
+            if(syoujo.ConnectHandsTF == true)
+            {
+                syoujo.OnConnectHands = false;
+            }
+            m_sickle.SetActive(true);
+            if (m_jump == false)
+            {
+                m_onAttack = true;
+                m_simpleAnimation.CrossFade("JumpAttack", 0.05f);
+            }
+            else
+            {
+                Debug.Log(m_onAttack);
+                m_onAttack = true;
+                m_simpleAnimation.CrossFade("Attack", 0.05f);
+            }
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "syoujo")
         {
             m_toConnectHands = true;
+        }
+        if(collision.gameObject.tag == "Ground")
+        {
+            m_jump = true;
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
@@ -75,7 +122,17 @@ public class ShinigamiController : CharacterBase {
             m_toConnectHands = false;
         }
     }
-    
+
+    public void OnAnimationFinished()
+    {
+        if (m_onAttack == true)
+        {
+            m_sickle.SetActive(false);
+            m_onAttack = false;
+        }
+        Debug.Log("FFFF");
+    }
+
     public Vector2 Posinvestigate
     {
         get
