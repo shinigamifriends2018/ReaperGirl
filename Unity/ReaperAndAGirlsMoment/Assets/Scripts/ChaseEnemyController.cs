@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NearController : MonoBehaviour{
+public class ChaseEnemyController : GhostController{
 
-    public int m_enemyHP = 2;
-    public GameObject m_testmove;
+    [SerializeField]
+    int m_enemyHP = 2;
+    [SerializeField]
+    GameObject m_testmove;
 
     // Use this for initialization
     void Start () {
@@ -15,7 +17,7 @@ public class NearController : MonoBehaviour{
 	// Update is called once per frame
 	void Update ()
     {
-
+        base.Chase();
         if (m_enemyHP == 0)
         {
             TestMove testMove = m_testmove.GetComponent<TestMove>();
@@ -27,9 +29,11 @@ public class NearController : MonoBehaviour{
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == ("sinigami"))
+        if (collision.gameObject.tag == ("shinigami"))
         {
             --m_enemyHP;
         }
+
+
     }
 }

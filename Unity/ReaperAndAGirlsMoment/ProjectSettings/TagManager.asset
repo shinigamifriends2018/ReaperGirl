@@ -7,13 +7,11 @@ TagManager:
   - syoujo
   - shinigami
   - Sickle
-  - akuryou2
-  - akuryou3
   - akuryou
-  - sinigami
   - Tutorial1
   - Tutorial2
   - Tutorial3
+  - Wall
   layers:
   - Default
   - TransparentFX
