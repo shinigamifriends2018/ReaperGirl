@@ -11,7 +11,11 @@ TagManager:
   - Tutorial1
   - Tutorial2
   - Tutorial3
+<<<<<<< HEAD
   - Wall
+=======
+  - Ground
+>>>>>>> master
   layers:
   - Default
   - TransparentFX
