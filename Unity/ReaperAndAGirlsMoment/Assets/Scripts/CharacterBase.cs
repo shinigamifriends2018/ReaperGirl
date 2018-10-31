@@ -24,6 +24,10 @@ public class CharacterBase : MonoBehaviour {
     {
         transform.Translate(new Vector2(m_moveSpeed * Time.deltaTime, 0f));
     }
+    protected void Fall()
+    {
+        gameObject.layer = LayerName.S;
+    }
     protected void Jump(Rigidbody2D rb)
     {
         if (m_jump == true)
