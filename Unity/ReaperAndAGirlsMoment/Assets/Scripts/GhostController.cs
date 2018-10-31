@@ -43,11 +43,9 @@ public class GhostController : CharacterBase {
     MoveState m_moveState;
 
     CharacterBase m_charcterBese;
-    [SerializeField]
-    GameObject m_syoujo;
-    [SerializeField]
-    GameObject m_akuryou;
 
+    public GameObject m_syoujo;
+    public GameObject m_akuryou;
 
     // Use this for initialization
     void Start()
@@ -144,6 +142,7 @@ public class GhostController : CharacterBase {
 
         if (akuryouPos.x > syoujoPos.x)
         {
+
             if (scale.x < 0)
             {
                 scale.x *= -1f;
@@ -153,6 +152,7 @@ public class GhostController : CharacterBase {
                 base.m_moveSpeed = -3f;
                 Move();
             }
+            
         }
         else
         {

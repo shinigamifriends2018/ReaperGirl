@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PatrolEnemyController : GhostController {
 
+    [SerializeField]
+    int m_enemyHP = 2;
 
     // Use this for initialization
     void Start()
@@ -18,11 +20,15 @@ public class PatrolEnemyController : GhostController {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == ("Wall") || collision.gameObject.tag == ("akuryou"))
+        if (collision.gameObject.tag == ("Wall"))
         {
             Vector2 scale = gameObject.transform.localScale;
             scale.x *= -1f;
             gameObject.transform.localScale = scale;
+        }
+        if (collision.gameObject.tag == (""))//鎌に当たるとダメージ
+        {
+            --m_enemyHP;
         }
     }
 }
