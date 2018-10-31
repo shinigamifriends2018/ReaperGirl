@@ -9,12 +9,17 @@ TagManager:
   - Sickle
   - akuryou2
   - akuryou3
+  - Wall
   - akuryou
   - sinigami
+  - shinigami
   - Tutorial1
   - Tutorial2
   - Tutorial3
+  - Tutorial2
+  - syoujo
   - Ground
+  - Sickle
   layers:
   - Default
   - TransparentFX
@@ -24,8 +29,13 @@ TagManager:
   - UI
   - 
   - 
+<<<<<<< HEAD
   - Floating floor
   - S
+=======
+  - Characters
+  - 
+>>>>>>> 25dedec9b6c12a3fba6bf5c130fe52e9205f0766
   - 
   - 
   - 
