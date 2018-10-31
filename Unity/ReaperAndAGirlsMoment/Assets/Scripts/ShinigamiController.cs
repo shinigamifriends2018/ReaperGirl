@@ -54,7 +54,11 @@ public class ShinigamiController : CharacterBase {
                 scale.x *= -1f;
             }
         }
-            
+
+        if (Input.GetButtonDown("S"))
+        {
+            Fall();
+        }
         if (Input.GetButtonDown("Jump"))
         {
             Jump(rb);

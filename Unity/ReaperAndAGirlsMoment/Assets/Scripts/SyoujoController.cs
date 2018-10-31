@@ -52,6 +52,13 @@ public class SyoujoController : CharacterBase
                 Jump(rb);
             }
         }
+        if (Input.GetButtonDown("S"))
+        {
+            if (m_onConnectHands == true)
+            {
+                Fall();
+            }
+        }
         if (m_onConnectHands == true)
         {
             ConnectHands();
