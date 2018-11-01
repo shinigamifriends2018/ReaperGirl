@@ -5,16 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - syoujo
-  - shinigami
-  - Sickle
-  - akuryou2
-  - akuryou3
+  - Wall
   - akuryou
-  - sinigami
-  - Tutorial1
-  - Tutorial2
-  - Tutorial3
   - Ground
+  - shinigami
+  - Tutorial1
+  - Tutorial3
+  - Tutorial2
   layers:
   - Default
   - TransparentFX
@@ -24,8 +21,8 @@ TagManager:
   - UI
   - 
   - 
-  - Floating floor
-  - S
+  - Charcters
+  - 
   - 
   - 
   - 
