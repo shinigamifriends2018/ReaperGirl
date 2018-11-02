@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LongEnemyContoller : MonoBehaviour {
+public class FarEnemyContoller : GhostController {
     [SerializeField]
     GameObject m_heart;
 
@@ -21,7 +21,7 @@ public class LongEnemyContoller : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == ("sinigami"))
+        if (collision.gameObject.tag == ("Sickle"))
         {
             --m_enemyHP;
             if (m_enemyHP == 0)
