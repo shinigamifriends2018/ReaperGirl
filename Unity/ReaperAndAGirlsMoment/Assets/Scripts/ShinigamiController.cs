@@ -12,6 +12,9 @@ public class ShinigamiController : CharacterBase {
     GameObject m_sickle;
     [SerializeField]
     SyoujoController syoujo;
+    float m_interval = 0.2f;
+
+
 
     Vector2 m_shinigamisPos;
 
@@ -33,11 +36,7 @@ public class ShinigamiController : CharacterBase {
         {
             m_moveSpeed = 4.5f;
         }
-        Debug.Log("main" + m_onAttack);
-        if (m_onAttack == false)
-        {
-            m_simpleAnimation.CrossFade("Idle", 0.2f);
-        }
+
         m_shinigamisPos = gameObject.transform.position;
         float h = Input.GetAxisRaw("Horizontal");
         transform.Translate(new Vector2(m_moveSpeed * h * Time.deltaTime, 0f));
@@ -67,6 +66,10 @@ public class ShinigamiController : CharacterBase {
         {
             Attack();  
         }
+		else if (m_onAttack == false)
+		{
+			m_simpleAnimation.CrossFade("Idle", m_interval);
+		}
         if (Input.GetButtonDown("ConnectHands"))
         {
             if (syoujo.ConnectHandsTF == false)
@@ -83,6 +86,11 @@ public class ShinigamiController : CharacterBase {
         }       
 
         transform.localScale = scale;
+       
+           
+               
+              
+      
 	}
 
     void Attack()
@@ -93,15 +101,15 @@ public class ShinigamiController : CharacterBase {
             {
                 syoujo.OnConnectHands = false;
             }
+
             m_sickle.SetActive(true);
             if (m_jump == false)
             {
                 m_onAttack = true;
-                m_simpleAnimation.CrossFade("JumpAttack", 0.05f);
+				m_simpleAnimation.CrossFade("JumpAttack", 0.05f);
             }
             else
             {
-                Debug.Log(m_onAttack);
                 m_onAttack = true;
                 m_simpleAnimation.CrossFade("Attack", 0.05f);
             }
@@ -110,18 +118,21 @@ public class ShinigamiController : CharacterBase {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "syoujo")
-        {
-            m_toConnectHands = true;
-        }
         if(collision.gameObject.tag == "Ground")
         {
             m_jump = true;
         }
     }
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "syoujo")
+        if (collision.gameObject.tag == "syoujo")
+        {
+            m_toConnectHands = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "syoujo")
         {
             m_toConnectHands = false;
         }
@@ -129,12 +140,17 @@ public class ShinigamiController : CharacterBase {
 
     public void OnAnimationFinished()
     {
-        if (m_onAttack == true)
         {
             m_sickle.SetActive(false);
-            m_onAttack = false;
+            Invoke("Interval", m_interval+0.1f);
+			m_simpleAnimation.CrossFade("Idle", m_interval);
+
         }
-        Debug.Log("FFFF");
+    }
+
+    void Interval()
+    {
+        m_onAttack = false;
     }
 
     public Vector2 Posinvestigate

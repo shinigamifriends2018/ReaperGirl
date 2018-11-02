@@ -32,6 +32,10 @@ public class SyoujoController : CharacterBase
         }
         else
         {
+            if(Mathf.Abs(transform.position.y - shinigami.Posinvestigate.y) > 1.35f)
+            {
+                m_onConnectHands = false;
+            }
             m_moveSpeed = 4.5f;
         }
         if (Input.GetButtonDown("FollowSwitch"))
@@ -153,12 +157,25 @@ public class SyoujoController : CharacterBase
             m_jump = true;
         }
     }
-    /* private void OnTriggerEnter2D(Collider2D collision)
+     private void OnTriggerStay2D(Collider2D collision)
      {
-         if(m_followMode == true)
-         {
-
-         }
+        if (m_followSwitch == true)
+        {
+            if (collision.gameObject.tag == "YJump")
+            {
+                if (shinigami.Posinvestigate.y - transform.position.y > 0.5f)
+                {
+                    Jump(rb);
+                }
+            }
+            else if (collision.gameObject.tag == "XJump")
+            {
+                if (Mathf.Abs(transform.position.x - shinigami.Posinvestigate.x) > 2.5f)
+                {
+                    Jump(rb);
+                }
+            }
+        }
      }
-     */
+     
 }

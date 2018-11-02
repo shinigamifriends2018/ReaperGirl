@@ -9,6 +9,7 @@ public class CharacterBase : MonoBehaviour {
     protected int m_hitPoint;
     protected SimpleAnimation m_simpleAnimation;
     protected bool m_jump = true;
+    protected float m_layerReturnTime = 0.35f;
 
     // Use this for initialization
     void Start () {
@@ -27,6 +28,7 @@ public class CharacterBase : MonoBehaviour {
     protected void Fall()
     {
         gameObject.layer = LayerName.S;
+        Invoke("Returnlayer", m_layerReturnTime);
     }
     protected void Jump(Rigidbody2D rb)
     {
@@ -39,5 +41,9 @@ public class CharacterBase : MonoBehaviour {
     protected void Damage()
     {
         m_hitPoint--;
+    }
+    void Returnlayer()
+    {
+        gameObject.layer = LayerName.Shinigami;
     }
 }
