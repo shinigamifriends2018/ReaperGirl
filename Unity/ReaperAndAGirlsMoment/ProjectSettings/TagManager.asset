@@ -11,7 +11,13 @@ TagManager:
   - shinigami
   - Tutorial1
   - Tutorial3
+<<<<<<< HEAD
   - Tutorial2
+=======
+  - Ground
+  - YJump
+  - XJump
+>>>>>>> 映人＿作業用
   layers:
   - Default
   - TransparentFX
@@ -21,12 +27,21 @@ TagManager:
   - UI
   - 
   - 
+<<<<<<< HEAD
   - Charcters
   - 
   - 
   - 
   - 
   - 
+=======
+  - Floating floor
+  - S
+  - Shinigami
+  - Syoujo
+  - Syoujoch
+  - Ground
+>>>>>>> 映人＿作業用
   - 
   - 
   - 
